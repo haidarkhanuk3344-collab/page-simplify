@@ -1,89 +1,133 @@
-# Page Simplify · 页面精简
+<p align="center">
+  <img src="assets/readme-cover.svg" alt="Page Simplify — 页面精简。保留巧思，理清重点。" width="100%">
+</p>
 
-一份用于 Codex 的界面审查与精简 Skill。整理冗余文案、重复模块和操作路径，校准视觉对齐、层级与装饰强度，让内容更清楚、页面更协调。
+<p align="center">
+  <strong>给页面做减法，让设计更清楚。</strong><br>
+  一份中文 Codex Skill，整理冗余文案、重复模块和操作路径，校准视觉层级与对齐。
+</p>
 
-**保留巧思，理清重点。**
+<p align="center">
+  <a href="#案例">查看案例</a> ·
+  <a href="#安装">安装</a> ·
+  <a href="#怎么用">开始使用</a> ·
+  <a href="SKILL.md">完整规则</a>
+</p>
 
-An interface review and simplification skill that reduces clutter, aligns visual hierarchy, and preserves design character and functionality.
+---
 
-## 适合什么时候用
+## 案例
 
-- 页面到处都有小字、口号和标签，重点难找。
-- 模块重复、容器叠加、操作绕行，需要整理内容与路径。
-- 字体、间距、图标、色彩或动效失衡，希望整体更简洁。
-- 已有明确风格，希望在保留个性与氛围的前提下精修。
+同一个「纸间」落地页，同一套内容与视觉主题。
 
-## 如何做取舍
+<table>
+  <tr>
+    <th width="50%">精简前 · 重点被反复表达</th>
+    <th width="50%">精简后 · 内容与行动更集中</th>
+  </tr>
+  <tr>
+    <td valign="top"><img src="examples/before-desktop.png" alt="原始页面：重复口号、多组宣传区和项目列表" width="100%"></td>
+    <td valign="top"><img src="examples/after-desktop.png" alt="精简后页面：保留纸张插画，集中创建入口，统一项目列表" width="100%"></td>
+  </tr>
+  <tr>
+    <td valign="top">小字、标签和收尾模块反复表达同一主题；创建项目需要经过欢迎弹窗。</td>
+    <td valign="top">保留纸张插画与暖色氛围，合并重复表达，统一对齐，直接进入创建表单。</td>
+  </tr>
+</table>
 
-先识别页面的视觉主题和设计巧思，再判断各元素在当前位置的作用。构图、节奏、氛围、品牌记忆和交互隐喻都属于有效的设计价值。
+[完整案例与验证记录 →](examples/landing-page-before-after.md)
 
-有价值但过于突出的元素，优先调整尺寸、位置、饱和度、阴影或动效强度。确认没有独立作用、移除后不会损害功能和表达的内容，再考虑删除。无法判断的既有设计默认保留。
+<details>
+<summary><strong>展开移动端对比</strong></summary>
 
-同时保护必要信息、真实能力、业务功能与无障碍使用，不用缩小文字、隐藏限制或虚构数据制造简洁感。
+<table>
+  <tr><th width="50%">精简前</th><th width="50%">精简后</th></tr>
+  <tr>
+    <td valign="top"><img src="examples/before-mobile.png" alt="390px 移动端原始页面" width="100%"></td>
+    <td valign="top"><img src="examples/after-mobile.png" alt="390px 移动端精简后页面" width="100%"></td>
+  </tr>
+</table>
 
-## 先看案例
+</details>
 
-[查看前后对照与处理理由](examples/landing-page-before-after.md) · [原始页面](examples/before.html) · [精简后页面](examples/after.html)
+下载仓库后，用浏览器打开 [原始页面](examples/before.html) 和 [精简后页面](examples/after.html)，即可体验交互。这是原创演示案例，判断过程和测试范围见案例记录。
 
-HTML 示例随仓库提供，下载后用浏览器打开即可体验。
+## 它会整理什么
+
+| 页面里的问题 | 处理方向 |
+| :--- | :--- |
+| 小字、口号和标签太多，重点难找 | 删除重复表达，让标题与必要信息更清楚 |
+| 模块重复、容器叠加、操作绕行 | 合并同类内容，减少无独立作用的步骤 |
+| 字号、间距、图标和色彩失衡 | 校准对齐与视觉层级，减弱抢眼的装饰 |
+| 已有明确风格，还需要精修 | 保留品牌气质、构图节奏和交互隐喻 |
+
+**先判断价值，再决定取舍。** 有价值但太突出的元素，优先减弱；用途不明的既有设计默认保留。必要信息、业务功能、真实能力与无障碍使用始终受到保护。
 
 ## 安装
 
-1. 下载或克隆独立仓库 [page-simplify](https://github.com/haidarkhanuk3344-collab/page-simplify)。仓库根目录就是完整的 Skill。
-2. 将整个 `page-simplify` 文件夹复制到 Codex 用户 skills 目录（无需复制 `.git` 目录）。默认目录为 `~/.codex/skills/`；自定义了 `CODEX_HOME` 时，使用该目录下的 `skills/`。
-3. 确认安装后的结构如下：
-
-```text
-skills/
-└── page-simplify/
-    ├── SKILL.md
-    ├── README.md
-    ├── LICENSE
-    ├── PUBLISHING.md
-    ├── references/
-    └── examples/
-```
-
-重新打开 Codex 或开始新会话，让它加载新 Skill。
-
-也可以使用 GitHub CLI 直接安装到默认目录（目标目录须尚不存在）：
+已安装 [GitHub CLI](https://cli.github.com/) 时，在终端运行：
 
 ```bash
-gh repo clone haidarkhanuk3344-collab/page-simplify ~/.codex/skills/page-simplify
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+gh repo clone haidarkhanuk3344-collab/page-simplify "${CODEX_HOME:-$HOME/.codex}/skills/page-simplify"
 ```
 
-## 调用示例
+重新打开 Codex 或开始新会话，然后用 `$page-simplify` 调用。目标文件夹已存在时，请先检查已有版本，避免覆盖本地修改。
+
+<details>
+<summary>手动安装与目录结构</summary>
+
+1. 点击仓库右上角 **Code → Download ZIP**，解压后将文件夹命名为 `page-simplify`。
+2. 将文件夹放入 `~/.codex/skills/`；如设置了 `CODEX_HOME`，放入该目录下的 `skills/`。
+3. 确认 `SKILL.md` 位于 `page-simplify` 根目录，重新打开 Codex 或开始新会话。
 
 ```text
-用 $page-simplify 审查这个落地页，先列出值得保留的设计，再给出可定位的精简建议。
+page-simplify/
+├── SKILL.md          核心规则
+├── README.md         安装与使用
+├── LICENSE           MIT 许可
+├── PUBLISHING.md      分发说明
+├── assets/           README 封面
+├── examples/         前后对照、HTML 与截图
+└── references/       可选审查表模板
 ```
 
+</details>
+
+## 怎么用
+
+### 先审查，再决定改什么
+
 ```text
-用 $page-simplify 精简这个页面，保留现有品牌风格与功能，优先减弱抢眼的装饰，并检查窄屏布局。
+用 $page-simplify 审查这个页面，先列出值得保留的设计，再给出可定位的精简建议，暂时不要改代码。
 ```
+
+### 直接精简已有页面
+
+```text
+用 $page-simplify 精简这个页面，保留现有品牌风格与功能，整理重复文案和模块，优先减弱抢眼的装饰，并检查窄屏布局。
+```
+
+### 只做视觉校准
 
 ```text
 按 $page-simplify 校准这个界面的对齐、字号、间距和动效，让主次更清楚，保留有意的不对称和视觉记忆点。
 ```
 
-## 示例与可选模板
+## 继续了解
 
-- [落地页前后对照与处理理由](examples/landing-page-before-after.md)：查看一个完整的精简案例。
-- [原始页面](examples/before.html) / [精简后页面](examples/after.html)：下载后用浏览器打开，对照页面表现。
-- [审查表与结果汇报模板](references/review-table-template.md)：需要逐项评审或交付表格时使用。
+| 资源 | 内容 |
+| :--- | :--- |
+| [核心规则](SKILL.md) | 判断依据、精简规则、执行与验证流程 |
+| [完整案例](examples/landing-page-before-after.md) | 每一项取舍的理由、桌面与窄屏验证记录 |
+| [审查模板](references/review-table-template.md) | 需要逐项评审时使用的可选表格 |
+| [分发说明](PUBLISHING.md) | 来源、发布检查与介绍文案 |
 
-这是一个原创演示案例，用来展示保留、减弱、校准与删除的取舍；单个案例不能证明适用于所有页面的效果。
+实际审查和修改依赖 Codex 能访问的页面、源码及工具；仅有截图时，只能评估可见内容。最终效果需要结合实际页面与使用情境验收。
 
-完整规则保留在 `SKILL.md` 中。示例与模板均为可选材料，只在需要参考或按表格交付时读取，无须每次任务加载。
+---
 
-## 使用边界
-
-这份 Skill 提供判断规则与执行流程。实际审查和修改依赖 Codex 可访问的页面、源码及工具；仅有截图时，无法据此验证交互与业务能力。
-
-审美取舍仍需要人工判断与最终验收。它不检测界面的模型来源，也不保证消除所有人对“AI 风格”的主观感受。
-
-完整规则见 [SKILL.md](SKILL.md)。
-
-本目录的规则、说明、模板与原创示例采用 [MIT License](LICENSE)。
-
-发布前检查与可复用介绍见 [分发说明](PUBLISHING.md)。
+<p align="center">
+  <strong>保留巧思，理清重点。</strong><br>
+  FHX · <a href="LICENSE">MIT License</a>
+</p>
